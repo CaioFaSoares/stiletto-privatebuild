@@ -6,6 +6,12 @@ import 'package:stiletto/widgets/flIcons.dart';
 import 'package:stiletto/values/colors.dart';
 import 'monoPage.dart';
 
+import 'package:stiletto/pages/about.dart';
+import 'package:stiletto/pages/home.dart';
+import 'package:stiletto/pages/ablGraf.dart';
+import 'package:stiletto/pages/ablProg.dart';
+
+
 class stilettoRoot extends StatefulWidget {
   @override
   _stilettoRootState createState() => _stilettoRootState();
@@ -34,7 +40,7 @@ class _stilettoRootState extends State<stilettoRoot> {
       body: Row(
           children: <Widget>[
             sideBar(),
-            monoPage(),
+            about(),
           ]
       ),
     );

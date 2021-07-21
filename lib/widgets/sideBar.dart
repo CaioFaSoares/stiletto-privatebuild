@@ -202,8 +202,7 @@ class _sideBarState extends State<sideBar> {
                       child: Text('Programação',
                         style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
                       //onTap: () => _navRefresh(1),
-                      )
-                  ),
+                  )
                 ],
               ),
             ],
