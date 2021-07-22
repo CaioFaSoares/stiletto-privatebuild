@@ -6,9 +6,8 @@ import 'package:stiletto/widgets/flIcons.dart';
 import 'package:stiletto/values/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
 
+class home extends StatefulWidget {
   @override
   _homeState createState() => _homeState();
 }
@@ -16,20 +15,19 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Text(
-                "Bem vindo mas diferente!",
-                style: TextStyle(
-                    fontSize: 12, fontFamily: 'Futura', color: txtNM),
-              ),
-            ],
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text(
+              "Home",
+              style: TextStyle(
+                  fontSize: 24, fontFamily: 'Futura', color: txtNM),
+            ),
+          ],
+        )
+      ],
     );
   }
 }
+

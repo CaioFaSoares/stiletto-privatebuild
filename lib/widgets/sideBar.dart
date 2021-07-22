@@ -76,7 +76,7 @@ class _sideBarState extends State<sideBar> {
                 ),
               ),
               Text(
-                "Caio Farias Soares",
+                "Caio Soares",
                 style: TextStyle(
                     fontSize: 18, fontFamily: 'Futura', color: txtNM),
                 textAlign: TextAlign.left,
@@ -145,9 +145,9 @@ class _sideBarState extends State<sideBar> {
                       Icons.perm_identity, size: 12, color: txtNM
                   ),
                   InkWell(
-                      child: Text('Sobre',
+                      child: Text('Home',
                         style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
-                      onTap: () => launch('https://twitter.com/it08s')
+                      onTap: () => monoPage.onTabTapped(0),
                   ),
                 ],
               ),
@@ -163,9 +163,9 @@ class _sideBarState extends State<sideBar> {
                     Icons.home, size: 12, color: txtNM,
                   ),
                   InkWell(
-                      child: Text('Home',
+                      child: Text('About',
                         style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
-                      onTap: () => launch('https://twitter.com/it08s')
+                    onTap: () => monoPage.onTabTapped(1),
                   ),
                 ],
               ),
@@ -250,7 +250,7 @@ class _sideBarState extends State<sideBar> {
                   InkWell(
                       child: Text('Behance',
                         style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
-                      onTap: () => launch('behance.net/caiosoares1')
+                      onTap: () => launch('https://behance.net/caiosoares1')
                   ),
                 ],
               ),
