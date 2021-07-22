@@ -8,15 +8,16 @@ import 'monoPage.dart';
 class stilettoRoot extends StatefulWidget {
   @override
   _stilettoRootState createState() => _stilettoRootState();
-
-  static setStateAtt() {}
 }
 
 class _stilettoRootState extends State<stilettoRoot> {
 
-  void setStateAtt(int val) {
-    setState(() {});
-  }
+  List<Widget> _paginas = [
+    home(),
+    about(),
+    //graf(),
+    //prog(),
+  ];
 
   @override
   Widget build(BuildContext context) {

@@ -19,19 +19,17 @@ class monoPage extends StatefulWidget {
   @override
   _monoPageState createState() => _monoPageState();
 
-  static onTabTapped(int index) {}
-
+  void onTabTapped(int index) {}
 }
 
 class _monoPageState extends State<monoPage> {
 
   int _navIndex = 0;
 
-  void onTabTapped(int index) {
-    setState(() {
-      _navIndex = index;
-      //stilettoRoot.setStateAtt();
-    });
+  @override
+  void onTabTapped(int index){
+    _navIndex = index;
+    setState(() {});
   }
 
   List<Widget> _paginas = [
@@ -43,9 +41,7 @@ class _monoPageState extends State<monoPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: _paginas.elementAt(_navIndex),
-    );
+    return _paginas.elementAt(_navIndex);
   }
 }
 

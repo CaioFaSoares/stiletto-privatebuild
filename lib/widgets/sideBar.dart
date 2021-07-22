@@ -17,7 +17,6 @@ class _sideBarState extends State<sideBar> {
   @override
   Widget build(BuildContext context) {
 
-
     final size = MediaQuery.of(context).size;
 
     return Container(
@@ -144,11 +143,15 @@ class _sideBarState extends State<sideBar> {
                   Icon(
                       Icons.perm_identity, size: 14, color: txtNM
                   ),
-                  InkWell(
-                      child: Text('Home',
-                        style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
-                      onTap: () => monoPage.onTabTapped(0),
-                  ),
+                  TextButton(
+                      child: Text('Home', style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left),
+                      onPressed: () {navButton(0);}
+                  )
+                  // InkWell(
+                  //     child: Text('Home',
+                  //       style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
+                  //     onTap: () => monoPage.onTabTapped(0),
+                  // ),
                 ],
               ),
               Row(
@@ -162,15 +165,10 @@ class _sideBarState extends State<sideBar> {
                   Icon(
                     Icons.home, size: 14, color: txtNM,
                   ),
-                  InkWell(
-                      child: Text('About',
-                        style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
-                    onTap: () {
-                      setState(() {
-                        monoPage.onTabTapped(1);
-                      });
-                    },
-                  ),
+                  TextButton(
+                      child: Text('About', style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left),
+                      onPressed: () {navButton(1);}
+                  )
                 ],
               ),
               Row(
@@ -300,4 +298,10 @@ class _sideBarState extends State<sideBar> {
       ),
     );
   }
+
+  void navButton (int index){
+    debugPrint('Pressed $index');
+    stilettoRoot.onTabTapped(index);
+  }
+
 }
