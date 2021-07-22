@@ -27,6 +27,13 @@ class _monoPageState extends State<monoPage> {
 
   int _navIndex = 0;
 
+  void onTabTapped(int index) {
+    setState(() {
+      _navIndex = index;
+      //stilettoRoot.setStateAtt();
+    });
+  }
+
   List<Widget> _paginas = [
     home(),
     about(),
@@ -40,13 +47,5 @@ class _monoPageState extends State<monoPage> {
       child: _paginas.elementAt(_navIndex),
     );
   }
-
-  void onTabTapped(int index) {
-    setState(() {
-      _navIndex = index;
-      stilettoRoot.setStateAtt();
-    });
-  }
-
 }
 

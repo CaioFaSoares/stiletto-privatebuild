@@ -142,11 +142,11 @@ class _sideBarState extends State<sideBar> {
                     ),
                   ),
                   Icon(
-                      Icons.perm_identity, size: 12, color: txtNM
+                      Icons.perm_identity, size: 14, color: txtNM
                   ),
                   InkWell(
                       child: Text('Home',
-                        style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
+                        style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
                       onTap: () => monoPage.onTabTapped(0),
                   ),
                 ],
@@ -160,12 +160,16 @@ class _sideBarState extends State<sideBar> {
                     ),
                   ),
                   Icon(
-                    Icons.home, size: 12, color: txtNM,
+                    Icons.home, size: 14, color: txtNM,
                   ),
                   InkWell(
                       child: Text('About',
-                        style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
-                    onTap: () => monoPage.onTabTapped(1),
+                        style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
+                    onTap: () {
+                      setState(() {
+                        monoPage.onTabTapped(1);
+                      });
+                    },
                   ),
                 ],
               ),
@@ -178,11 +182,11 @@ class _sideBarState extends State<sideBar> {
                     ),
                   ),
                   Icon(
-                    Icons.home, size: 12, color: txtNM,
+                    Icons.home, size: 14, color: txtNM,
                   ),
                   InkWell(
                       child: Text('Gráficos',
-                        style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
+                        style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
                       onTap: () => launch('https://twitter.com/it08s')
                   ),
                 ],
@@ -196,11 +200,11 @@ class _sideBarState extends State<sideBar> {
                     ),
                   ),
                   Icon(
-                    Icons.home, size: 12, color: txtNM,
+                    Icons.home, size: 14, color: txtNM,
                   ),
                   InkWell(
                       child: Text('Programação',
-                        style: TextStyle(fontSize: 12, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
+                        style: TextStyle(fontSize: 14, fontFamily: 'Futura', color: txtNM), textAlign: TextAlign.left,),
                       //onTap: () => _navRefresh(1),
                   )
                 ],

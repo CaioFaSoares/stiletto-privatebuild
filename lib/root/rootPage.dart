@@ -10,16 +10,16 @@ class stilettoRoot extends StatefulWidget {
   _stilettoRootState createState() => _stilettoRootState();
 
   static setStateAtt() {}
-
 }
 
 class _stilettoRootState extends State<stilettoRoot> {
 
+  void setStateAtt(int val) {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-
-    final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Row(
           children: <Widget>[
@@ -28,9 +28,5 @@ class _stilettoRootState extends State<stilettoRoot> {
           ]
       ),
     );
-  }
-
-  void setStateAtt(int val) {
-    setState(() {});
   }
 }

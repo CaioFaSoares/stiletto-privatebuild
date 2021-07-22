@@ -28,9 +28,9 @@ class _aboutState extends State<about> {
           Row(
             children: [
               Text(
-                "Bem vindo",
+                "About",
                 style: TextStyle(
-                    fontSize: 12, fontFamily: 'Futura', color: txtNM),
+                    fontSize: 24, fontFamily: 'Futura', color: txtNM),
               ),
             ],
           )
